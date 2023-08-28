@@ -1,0 +1,502 @@
+/* Añado la fuente Amsterdam que tuve que descargar */
+@font-face {
+    font-family: "Amsterdam";
+    src: url("C:/Users/aimev/Escritorio/Panadería y Pastelería/fonts/Amsterdam.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos para el cuerpo de la página */
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustes del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffff;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 10px;
+    box-shadow:  0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+/* Estilos del logo */
+.logo img {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    max-width: 80%;
+    max-height: 60%;
+    vertical-align: middle;
+    width: auto;
+}
+
+/* Espacios entre el logo y el menú */
+.logo {
+    margin-right: 10px;
+}
+
+/* Estilos para el menú */
+.menu-lista {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+/* Lista del menú */
+.menu-lista ul#menu {
+    position:absolute;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 95px;
+    padding-right: 50px;
+
+}
+
+/* Estilos para cada elemento de la lista del menú */
+#menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+}
+
+#menu li {
+    padding: 0 10px;
+    margin-right: 18px;
+    
+}
+
+#menu li:hover {
+    color: #ff914d;
+}
+
+#menu li a:hover {
+    color: #ff914d;
+}
+
+#menu li a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-style: none;
+    font-weight: normal;
+}
+
+/* Estilos para el ícono de buscador */
+#buscador-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Espacio entre el ícono y los elementos del menú */
+    cursor: pointer;
+    margin-left: auto; /* Mueve el icono al final del menú */
+}
+
+/* Estilos para la imagen del ícono de buscador */
+#buscador-icon img {
+    width: 18px; /* Ancho de la imagen del ícono */
+    height: 18px; /* Altura de la imagen del ícono */
+    transition: opacity 0.3s;
+}
+
+#buscador-icon img:hover {
+    opacity: 0.7; /* Opacidad al pasar el mouse sobre el ícono */
+}
+
+/* Estilos para los títulos principales */
+.titulos {
+    font-family: "Amsterdam", sans-serif;
+    font-weight: normal;
+    font-size: 41px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+
+/* Estilos para el texto de cantidad de productos */
+#nproductos {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* Estilos para el primer párrafo */
+#p1 {
+    font-size: 40px;
+    margin-top: 12px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.panaderia-pasteleria {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px 50px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+
+/* Ajustes para el catálogo */
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Esto es para que hayan 6 productos por fila */
+    gap: 20px; /*espacio entre las imágenes */
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 10px;
+    justify-items: center;
+}
+
+/* Estilos para el campo de búsqueda */
+#busqueda {
+    width: 40%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Estilos para el contenedor de productos en el catálogo */
+.producto-contenedor {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para el contenedor de imágenes en el catálogo */
+.producto-contenedor .imagen-contenedor {
+    display: contents; /* Para que el contenedor y la imagen tengan el mismo tamaño*/
+    width: 100%; /* Establece el ancho deseado */
+    height:fit-content; /* Ajusta la altura automáticamente según la proporción de la imagen */
+    /* text-align: center; */
+    margin: 15px ; /* Espacio entre las imágenes */
+}
+
+/* Estilos para las imágenes dentro del contenedor */
+.producto-contenedor .imagen-contenedor img {
+    width: 100%;
+    height: 80%;
+    object-fit:contain; /* Así la imagen mantiene su tamaño*/
+    
+}
+
+.producto-contenedor .info-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3px 20px 20px 20px;
+    margin-top: 1px;
+}
+
+/* Propiedades para el nombre del producto */
+.nombre-producto {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-top: 0;
+    padding-left: 15px;
+
+}
+
+/* Estilos para el precio de los productos */
+.producto-contenedor .precio {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    color: #ff914d;
+    margin-top: 0;
+    padding-right: 10px;
+
+} 
+
+
+/* Propiedades para el cartelito de 50%off que aparece en la esquina del producto */
+.desc {
+    position:absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff914d;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 0 0 0 8px;
+}
+
+
+
+
+/* Ajustes Botón Catálogo */
+
+.ver-catalogo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ver-catalogo {
+    text-align: center;
+    text-decoration: none;
+    background-color: #bccfd2;
+    color: black;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.ver-catalogo:hover {
+    background-color: #ff914d;
+}
+
+/* Ajustes para la sección de anuncios */
+.anuncios {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    padding-bottom: 50px;
+}
+
+/* Aplico propiedades a cada article de anuncios */
+
+.anuncios article{
+    text-align: center;
+    position: relative;
+}
+
+/* Estilos para el título de anuncios */
+.anuncios h1 {
+    font-family: "Amsterdam", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0; /* Elimina el margen por defecto del h1*/
+}
+
+/* Linea vertical que aparece entre los titulos de anuncios */
+.anuncios article::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: 9px;
+    top: 2px;
+    /* transform: translateY(-50%); */
+    height: 200px;
+    width: 1px;
+    background-color: #000;
+    display: none;
+}
+
+.anuncios article:nth-child(1)::before,
+.anuncios article:nth-child(2)::before {
+    display: bolck;
+}
+
+.anuncios article:nth-child(2)::before,
+.anuncios article:nth-child(3)::before{
+    top: auto;
+    bottom: 2px;
+    display: block;
+}
+
+/* Ajustes section Sobre Nosotros */
+
+.sobre-nosotros{
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.oldbarnmarket.com/wp-content/uploads/2017/04/bakery-header-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.p-p-titulo, .sobre-nosotros-titulo {
+    flex: 1;
+}
+
+.p-p-titulo h1, .sobre-nosotros-titulo h1 {
+    font-size: 40px ;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+}
+
+.p-p-contenido, .sobre-nosotros-contenido {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-nosotros-descripcion p {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Ajustes para el formulario */
+.formulario {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.formulario h2 {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.formulario button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff914d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #ff7e00;
+}
+
+
+/* Estilos para el botón "Volver arriba" */
+#volver-arriba {
+    position: fixed;
+    bottom:40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #73c1cb;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#volver-arriba a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Oculta el botón por defecto */
+#volver-arriba.hidden {
+    display: none;
+}
+
+/* Estilos para la flecha hacia arriba */
+#volver-arriba::before {
+    content: "\2191"; /* Código Unicode para la flecha hacia arriba */
+    font-size: 25px;
+    line-height: 25px;
+}
+
+
+
+/* Ajustes para el footer */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logo del footer */
+.footer-logo img {
+    width: auto;
+    height: 100px;
+}
+
+.footer-hora p {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-contacto p, .footer-social p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Estilos para titulo de Contacto y redes sociales */
+.footer-contacto h3, .footer-social h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos para los iconos del footer */
+.footer-contacto img, .footer-social img {
+    max-width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
+
+

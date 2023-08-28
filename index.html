@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borcelle - Inicio</title>
+
+        <!-- Estilos CSS -->
+        <link rel="stylesheet" href="./css/style.css"> 
+
+        <!-- Fuentes -->
+
+        <!-- Fuentes de Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amsterdam&display=swap">
+
+        <!-- Fuente instalada -->
+        <link rel="stylesheet" href="./fonts/Amsterdam.ttf">
+
+    </head>
+    <body>
+        <!-- Encabezado: la parte de arriba de mi página-->
+        <header>
+            <!-- Barra de navegación: menú o atajos para encontrar las cosas más rápido. -->
+            <nav class="navbar"> <!--  Le asigno el nombre "navbar" porque es una barra de navegación -->
+                <!-- Logo -->  
+                <div class="logo">
+                    <a href="file:///C:/Users/aimev/Escritorio/Panader%C3%ADa%20y%20Pasteler%C3%ADa/index.html"> <!-- Le agrego el ancla (a) para que al apretar en el logo me lleve al incio, sería más útil si tuviese más pages hechas -->
+                        <img src="./img/2-logo-negro.png" alt="logo panadería"> <!-- Imagen del logo -->
+                    </a> 
+                </div>
+
+                <!-- Menú -->
+                <section class="menu-lista">
+                    <ul id="menu"> <!-- Hago una lista desordenada para mi menú, cada ítem es una opción o atajo -->
+                        <!-- Lista del menu -->
+                        <li><a href="/">Inicio</a></li> <!-- Esta ancla es para que al apretar en la palabra "Inicio" me lleve al incio -->
+                        <li>Conocenos</li>
+                        <li><a target="_blank" href="./pages/catalogo.html">Catálogo</a></li> <!-- Si aprieto en catálogo me va a direccionar a otra página, lo mismo que el ancla para Inicio -->
+                        <li>Contacto</li>
+                        <li id="buscador-icon"> <!-- icono de buscador (por ahora sin función) -->
+                            <a href="#"> <!-- Ancla sin función -->
+                                <img src="./img/buscador.png" alt="Icono de buscador">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </header> <!-- Acá se termina mi header, es decir la parte de arriba de mi página -->
+        
+        <!-- Comienza el contenido principal de mi página (en criollo: lo del medio) -->
+        <main>
+            <!-- Hago un section para cada "parte" de mi contenido principal; título "Panadería & Pastelería", "Nuestros productos", "Anuncios", "Sobre nosotros", "Formulario" -->
+
+            <!-- Sección para todo lo que es la parte de "panadería y pastelería" -->
+            <section class="panaderia-pasteleria">
+                <div class="p-p-titulo"> <!-- Meto cada cosa en divs para que me sea cómodo manejar el contenido al acomodarlos en mi página -->
+                    <h1>Panadería <br> & <br> Pastelería </h1> <!-- Utilizo los br en mi título para que me aparezca una palabra debajo de la otra -->
+                </div>
+                <div class="p-p-contenido">
+                    <div class="p-p-imagen">
+                        <img src="./img/anuncios (2).png" alt="imagen-anuncio">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de productos -->
+            <section> <!-- En esta sección incluyo todo lo que es la parte de productos y catálogo -->
+                    <h1 class="titulos">nuestros productos</h1>
+                    <p id="nproductos">TODOS LOS PRODUCTOS / PAN / TORTAS / FACTURAS / MEDIALUNAS</p> <!-- Parráfo decorativo que figura debajo de mi h1 -->
+
+                    <!-- Cada producto es un div, con su correspondiente imagen, precio, nombre y oferta o no. -->
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor"> <!-- Contenedor para la imagen del producto -->
+                            <!-- 1er producto -->
+                            <img src="./img/macarons1.jpg" alt="imagen-macarrons" >
+                        </div>
+                        <div class="info-producto"> <!-- Otro contenedor para la información del producto -->
+                            <P class="nombre-producto">Macarrons 6u.</P>
+                            <p class="precio"> $1200</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Teniendo contenedores por cada producto me es más fácil luego aplicarle estilos en CSS -->
+
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor">
+                            <!-- 2do producto -->
+                            <img src="./img/brownie.jpg" alt="imagen-brownie" >
+                        </div>
+                        <div class="info-producto">
+                            <P class="nombre-producto">Brownie</P>
+                            <p class="precio"> $800</p>
+                            <span class="desc">20% off</span> <!-- Esto es el cartelito de oferta que aparece en la esquina del producto -->
+                        </div>
+                    </div>
+                    
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor">
+                            <!-- 3er producto -->
+                            <img src="./img/budín.jpg" alt="imagen-budin" >
+                        </div>
+                        <div class="info-producto">
+                            <P class="nombre-producto">Budín</P>
+                            <p class="precio"> $700</p>  
+                        </div>
+                    </div>
+                    
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor">
+                            <img src="./img/roll.jpg" alt="imagen-roll" >
+                        </div>
+                        <div class="info-producto">
+                            <P class="nombre-producto">Roll Canela 6u.</P>
+                            <p class="precio"> $1500</p>
+                            <span class="desc">50% off</span> <!-- Esto es el cartelito de oferta que aparece en la esquina del producto -->
+                        </div>
+                    </div>
+
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor">
+                            <img src="./img/croissant.jpg" alt="imagen-croissant" > <!-- el alt="" me da info sobre la imagen, en el caso de que no aparezca por algun error en el navegador -->
+                        </div>
+                        <div class="info-producto">
+                            <P class="nombre-producto">Croissant c/u</P>
+                            <p class="precio"> $300</p>  
+                        </div>
+                    </div>                    
+                    
+                    <div class="producto-contenedor">
+                        <div class="imagen-contenedor">
+                            <img src="img/pan integral2.avif" alt="imagen-pan-integral" >
+                        </div>
+                        <div class="info-producto">
+                            <P class="nombre-producto">Pan Integral</P>
+                            <p class="precio"> $600</p>   
+                        </div>
+                    </div>
+                 
+                <!-- botón que me va a llevar a ver el catálogo completo (por ahora sin función) -->
+                <div class="ver-catalogo-container">
+                    <a href="C:\Users\aimev\Escritorio\Panadería y Pastelería\pages\catalogo.html" class="ver-catalogo">Ver Catálogo</a>
+                </div>
+
+            </section> <!-- Acá termina la sección para los productos -->
+
+            <section class="anuncios"> <!-- Sección de anuncios -->
+            
+                <!-- Separo cada anuncio en un article, con su titulo y su info correspondiente. -->
+                <article>
+                    <h1 class="titulos">regalos especiales</h1>
+                    <p>- Día del padre   $---</p>
+                    <p>- Día del padre   $---</p>
+                    <p>- Día del padre   $---</p>
+                    <p>- Día del padre   $---</p>
+                </article>
+                <article>
+                    <h1 class="titulos">ofertas del mes</h1>
+                    <p>Oferta     $</p>
+                    <p>Oferta     $</p>
+                    <p>Oferta     $</p>
+                    <p>Oferta     $</p>
+                </article>
+                <article>
+                    <h1 class="titulos">desayunos y meriendas</h1>
+                    <p>Mix de ..... $</p>
+                    <p>Mix de ..... $</p>
+                    <p>Mix de ..... $</p>
+                    <p>Mix de ..... $</p>
+                </article>
+            </section>
+
+            <!-- Sección sobre nosotros -->
+            <section class="sobre-nosotros">
+                
+                <!-- Acá también, separo el contenido de mi section en divs, para poder manejar mejor los estilos luego. -->
+                <div class="sobre-nosotros-titulo">
+                    <h1>Sobre <br>Nosotros</h1> <!-- Aplico br para que me aparezca una palabra debajo de la otra -->
+                </div>
+                <div class="sobre-nosotros-contenido">
+                    <div class="sobre-nosotros-descripcion">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut possimus non, temporibus, vitae odit pariatur laudantium ipsam a harum aperiam vero enim voluptatum id aliquid nihil ipsum architecto. Magnam, officia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--  Sección para el formulario -->
+            <section class="formulario">
+                <!-- Parte para contactar -->
+                <h2>Contáctanos</h2> <!-- Título -->
+                <form action="procesar_formulario.php" method="post">
+                    <!-- Campos del formulario -->
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <!-- Parte para suscribirse, con JS -->
+                <h2>Suscríbete</h2>
+                <form id="subscripcion-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+                <div id="subscription-status"></div>
+            </section>
+
+            <!-- Botón para volver arriba -->
+            <div id="volver-arriba" class="hidden">
+                <a href="#top"></a>
+            </div>
+
+        </main> <!-- Acá termina la parte principal de mi página -->
+        
+        <!-- Pie de página, es decir, la parte de abajo de mi página -->
+        <footer>
+            <div class="footer-container"> <!-- Contenedor para los elementos de mi footer, cada elemento va a tener su propio contenedor -->
+                <div class="footer-logo">
+                    <a href="C:\Users\aimev\Escritorio\Panadería y Pastelería\index.html">
+                        <img src="./img/2-logo-color (1).png" alt="Logo de la panadería"> <!-- Logo del footer, con ancla hacia el inicio de la página -->
+                    </a>
+                </div>
+                <div class="footer-hora"> <!-- Contenedor para los horarios de atención -->
+                    <p>Martes a Domingos<br>08:00 - 20:00</p>
+                </div>
+                <div class="footer-contacto"> <!-- Contenedor para la información de contacto -->
+                    <h3>Contacto</h3>
+                    <p><img src="./img/telefonoicon.avif" alt="Teléfono"> +123 456 789</p> <!-- Dentro de cada párrafo agrego la imagen de los íconos-->
+                    <p><img src="./img/correoicon.png" alt="Email"> info@panaderia.com</p>
+                    <p><img src="./img/ubi-icon.png" alt="Dirección"> Av. Siempre Viva</p>
+                </div>
+                <div class="footer-social"> <!-- Contenedor para la sección de redes sociales -->
+                    <h3>Redes Sociales</h3>
+                    <p>
+                        <img src="./img/instagramicon.webp" alt="Instagram">
+                        @borcelle.panaderia
+                    </p>
+                    <p href="#">
+                        <img src="./img/facebookicon.png" alt="Facebook">
+                        Borcelle Panaderia
+                    </p>
+                    <p href="#">
+                        <img src="./img/wspicon.png" alt="WhatsApp">
+                        1122667788
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
